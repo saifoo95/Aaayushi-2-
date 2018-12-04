@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  	
+	<title>Full page intro and navigation</title>
+	<style>
+		.seperator{
+			padding-left: 7px;
+			padding-right: 7px;
+		}
+		#myVideo {
+		position: fixed;
+		right: 0;
+		bottom: 0;
+		min-width: 100%; 
+		filter: sepia(30%) opacity(40%);
+		min-height: 100%;
+	}
+	#id:hover{
+		
+	}
+	#trip, #family{
+		cursor: pointer;
+	}
+	</style>
+</head>
+<body>
+
+<main id="cd-main-content">
+<video autoplay muted loop id="myVideo">
+  <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+	<section id="cd-intro">
+		<h1><span id="trip">Trip</span><span class="seperator"></span><span id="family"> Family</span></h1>
+
+		<header class="cd-header">
+			<div id="cd-logo"><a href="#0"><img src="img/cd-logo.svg" alt="Logo"></a></div>
+			<a class="cd-menu-trigger" href="#main-nav">Menu<span></span></a>
+		</header>
+		<div class="cd-blurred-bg"></div>
+	</section> <!-- cd-intro -->
+</main>
+
+<div class="cd-shadow-layer"></div>
+
+<nav id="main-nav">
+	<ul>
+		<li><a href="#0"><span>Tour</span></a></li>
+		<li><a href="#0"><span>Pricing</span></a></li>
+		<li><a href="#0"><span>Labs</span></a></li>
+		<li><a href="#0"><span>About</span></a></li>
+		<li><a href="#0"><span>Contact us</span></a></li>
+	</ul>
+	<a href="#0" class="cd-close-menu">Close<span></span></a>
+</nav>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script>
+$("#trip").mouseover(function() {
+$('#cd-intro').css("transition", "0.5s");
+    $('#cd-intro').css("background", "url(./img/bg-img.jpg)");
+	$('#cd-intro').css("background-size", "cover");
+	
+});
+$("#trip").mouseout(function() {
+    $('#cd-intro').css("background", "");
+});
+$("#family").mouseover(function() {
+$('#cd-intro').css("transition", "0.5s");
+    $('#cd-intro').css("background", "url(./img/bg-img.jpg)");
+	$('#cd-intro').css("background-size", "cover");
+	
+});
+$("#family").mouseout(function() {
+    $('#cd-intro').css("background", "");
+});
+</script>
+</body>
+</html>
