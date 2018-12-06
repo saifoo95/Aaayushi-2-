@@ -37,7 +37,18 @@
 <body style="background-color: #85D9BF">
 
 	<section id="cd-intro">
-		<div class="owl-carousel owl-carousel-custom ">
+	<header class="cd-header" style="position: relative; ">
+			<div id="cd-logo"><a href="#0"><img src="./img/cd-logo.svg" alt="Logo"></a></div>
+			<a class="cd-menu-trigger" href="#main-nav">Menu<span></span><br></a>
+		</header>
+		
+		<div class="custom1 owl-carousel">
+			<div style="background: url('./img/aa1.png.png'); background-size: cover; background-position: center;">  </div>
+			<div style="background: url('./img/aa3.png'); background-size: cover; background-position: center;">  </div>
+			<div style="background: url('./img/bg-img.jpg'); background-size: cover; background-position: center;">  </div>
+			<div style="background: url('./img/profile.jpg'); background-size: cover; background-position: center;">  </div>
+		</div>
+		<div class="owl-carousel-custom owl-carousel ">
 			<div style="height: 35vh;background-color: blue; border-radius: 5px; background: url('./img/random/petra.jpeg'); background-size: cover; ">  </div>
 			<div style="height: 35vh;background-color: red; border-radius: 5px; background: url('./img/random/coffee.jpg'); background-size: cover;">  </div>
 			<div style="height: 35vh;background-color: green; border-radius: 5px; background: url('./img/random/bookstore.jpg'); background-size: cover;">  </div>
@@ -46,16 +57,6 @@
 			<div style="height: 35vh;background-color: white; border-radius: 5px; background: url('./img/random/sunset.jpg'); background-size: cover;">  </div>
 			<div style="height: 35vh;background-color: pink; border-radius: 5px; background: url('./img/random/classroom.jpg'); background-size: cover;">  </div>
 		</div>
-		<div class="custom1 owl-carousel">
-			<div style="background: url('./img/aa1.png.PNG'); background-size: cover; background-position: center;">  </div>
-			<div style="background: url('./img/aa3.PNG'); background-size: cover; background-position: center;">  </div>
-			<div style="background: url('./img/bg-img.jpg'); background-size: cover; background-position: center;">  </div>
-			<div style="background: url('./img/profile.jpg'); background-size: cover; background-position: center;">  </div>
-		</div>
-		<header class="cd-header" style="position: fixed; bottom: 0; ">
-			<div id="cd-logo"><a href="#0"><img src="./img/cd-logo.svg" alt="Logo"></a></div>
-			<a class="cd-menu-trigger" href="#main-nav">Menu<span></span><br></a>
-		</header>
 		
 	</section> <!-- cd-intro -->
 
@@ -73,12 +74,14 @@
 	<a href="#0" class="cd-close-menu">Close<span></span></a>
 </nav>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
 <script src="js/owl.carousel.min.js"></script>
 <script>
 var owl = $('.owl-carousel-custom');
 owl.owlCarousel({
+slideTransition: 'linear',
+lazyLoadEager: 5,
     items:4,
     loop:true,
     margin:5,
@@ -112,7 +115,7 @@ $('.stop').on('click',function(){
     owl.trigger('stop.owl.autoplay')
 });
 $('.custom1').owlCarousel({
-    animateOut: 'fadeOut',
+    animateOut: 'fadeOutLeft',
     animateIn: 'fadeIn',
 	autoplay: true,
 	loop:true,
