@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
 
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
@@ -32,23 +32,34 @@
 			height: 58vh;
 		}
 		}
+		#cd-main-content:before {
+   content: "";
+   position: absolute;
+   z-index: -1;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background-image: url(./img/random/petra.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: 0.4;
+    filter:alpha(opacity=40);
+    height:100%;
+    width:100%;
+ }
 	</style>
 </head>
-<body style="background-color: #85D9BF">
-
+<body style="background-color: black" >
+<main id="cd-main-content">
 	<section id="cd-intro">
 	<header class="cd-header" style="position: relative; ">
 			<div id="cd-logo"><a href="#0"><img src="./img/cd-logo.svg" alt="Logo"></a></div>
 			<a class="cd-menu-trigger" href="#main-nav">Menu<span></span><br></a>
 		</header>
 		
-		<div class="custom1 owl-carousel">
-			<div style="background: url('./img/aa1.png.PNG'); background-size: cover; background-position: center;">  </div>
-			<div style="background: url('./img/aa3.PNG'); background-size: cover; background-position: center;">  </div>
-			<div style="background: url('./img/bg-img.jpg'); background-size: cover; background-position: center;">  </div>
-			<div style="background: url('./img/profile.jpg'); background-size: cover; background-position: center;">  </div>
-		</div>
-		<div class="owl-carousel-custom owl-carousel ">
+
+		<div class="owl-carousel-custom owl-carousel " style="position:absolute; bottom:0px">
 			<div style="height: 35vh;background-color: blue; border-radius: 5px; background: url('./img/random/petra.jpeg'); background-size: cover; ">  </div>
 			<div style="height: 35vh;background-color: red; border-radius: 5px; background: url('./img/random/coffee.jpg'); background-size: cover;">  </div>
 			<div style="height: 35vh;background-color: green; border-radius: 5px; background: url('./img/random/bookstore.jpg'); background-size: cover;">  </div>
@@ -60,7 +71,7 @@
 		
 	</section> <!-- cd-intro -->
 
-
+</main>
 <div class="cd-shadow-layer"></div>
 
 <nav id="main-nav">
@@ -68,13 +79,12 @@
 		<li><a href="#0"><span>Tour</span></a></li>
 		<li><a href="#0"><span>Pricing</span></a></li>
 		<li><a href="#0"><span>Labs</span></a></li>
-		<li><a href="#0"><span>About</span></a></li>
-		<li><a href="#0"><span>Contact us</span></a></li>
+		
 	</ul>
 	<a href="#0" class="cd-close-menu">Close<span></span></a>
 </nav>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
 <script src="js/owl.carousel.min.js"></script>
 <script>
@@ -86,7 +96,7 @@ lazyLoadEager: 5,
     loop:true,
     margin:5,
     autoplay:true,
-    autoplayTimeout:2500,
+    autoplayTimeout:3500,
     autoplayHoverPause:true,
 	responsiveClass:true,
 	dots: false,
